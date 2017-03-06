@@ -1,7 +1,7 @@
 {
-  "name": "lurch83.github.io",
+  "name": "personal website",
   "version": "0.1.0",
-  "homepage": "https://lurch83.github.io/lurch83.github.io",
+  "homepage": "https://lurch83.github.io/personal-website",
   "private": true,
   "dependencies": {
     "react": "^15.4.2",
