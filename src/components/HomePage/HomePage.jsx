@@ -1,11 +1,24 @@
 import React, {Component} from 'react';
+import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 import someBlogPost from '../../blog/some-blog-post.md'
+
+//TODO: Move this to somewhee shared
+const Box = styled.div`
+  background-color: #eee;
+  margin-top: 20px;
+  padding: 20px;  
+  -moz-box-shadow: 0 0 3px #ccc;
+  -webkit-box-shadow: 0 0 3px #ccc;
+  box-shadow: 0 0 5px #ccc;
+`;
 
 class HomePage extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      markdown: ''
+    };
   }
 
   componentWillMount() {    
@@ -21,16 +34,14 @@ class HomePage extends Component {
   }
   
   render() {  
-    const {markdown} = this.state;
-    console.log('STATE', this.state)
+    const {markdown} = this.state;        
     return(
-      <div>
-        <p className="App-intro test">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>  
-        <h3>Blog</h3>        
+      <Box>
+        <h3>Blog</h3>  
+        
+        
         <ReactMarkdown source={markdown} />
-      </div>    
+      </Box>    
     );  
   }
 };
