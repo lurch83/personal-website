@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import styled from 'styled-components';
 import HomePage from '../HomePage/HomePage';
+import Box from '../Box/Box';
+import {Router, Match, Link} from 'react-router'
 
 const Container = styled.div`
   width: 100%;
@@ -11,29 +13,22 @@ const Container = styled.div`
   box-sizing: border-box;  
 `;
 
-const Box = styled.div`
-  background-color: #eee;
-  margin-top: 20px;
-  padding: 20px;  
-  -moz-box-shadow: 0 0 3px #ccc;
-  -webkit-box-shadow: 0 0 3px #ccc;
-  box-shadow: 0 0 5px #ccc;
-`;
-
 class App extends Component {
   render() {
-    return (      
-        <div className="App">
+    return (    
+      <Router>      
+        <div classNa45985522  me="App">
           <Container>
             <Box>
-              <h1>Andrew Doyle</h1>
-              <div>A somewhat tale blood, sweat and software development.</div>
-            </Box>
-            <HomePage />            
+              <Link to="/"><h1>Andrew Doyle</h1></Link>
+              <div>A somewhat tale blood, gears and software development.</div>
+            </Box>            
+            <div>
+              <Match exactly pattern="/" component={HomePage} />            
+            </div>            
           </Container>
-
         </div>
-      
+      </Router>
     );
   }
 }

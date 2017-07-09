@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Some Blog Post",
+    "date": "01/07/2017",
+    "file": "/some-blog-post.md"
+  },
+    {
+    "id": 2,
+    "title": "Some Blog Post 2",
+    "date": "9 /07/2017",
+    "file": "/some-blog-post2.md"
+  }
+]
