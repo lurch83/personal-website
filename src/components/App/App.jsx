@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import styled from 'styled-components';
-import HomePage from '../HomePage/HomePage';
 import Box from '../Box/Box';
-import {Router, Match, Link} from 'react-router'
 
 const Container = styled.div`
   width: 100%;
@@ -15,20 +13,16 @@ const Container = styled.div`
 
 class App extends Component {
   render() {
-    return (    
-      <Router>      
-        <div classNa45985522  me="App">
+    return (         
+        <div className="App">
           <Container>
             <Box>
-              <Link to="/"><h1>Andrew Doyle</h1></Link>
+              <h1>Andrew Doyle</h1>
               <div>A somewhat tale blood, gears and software development.</div>
             </Box>            
-            <div>
-              <Match exactly pattern="/" component={HomePage} />            
-            </div>            
+                        
           </Container>
         </div>
-      </Router>
     );
   }
 }
