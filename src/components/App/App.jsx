@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import styled from 'styled-components';
 import Box from '../Box/Box';
+import Header from '../Header/Header';
+import Main from '../Main/Main';
 
 const Container = styled.div`
   width: 100%;
@@ -16,11 +18,8 @@ class App extends Component {
     return (         
         <div className="App">
           <Container>
-            <Box>
-              <h1>Andrew Doyle</h1>
-              <div>A somewhat tale blood, gears and software development.</div>
-            </Box>            
-                        
+            <Header />                     
+            <Main />
           </Container>
         </div>
     );
