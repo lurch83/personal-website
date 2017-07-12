@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import Box from '../Box/Box'
 import someBlogPost from '../../blog/some-blog-post.md'
 
-class HomePage extends Component {
+class BlogItem extends Component {
   constructor(props) {
     super(props);    
     this.state = {
@@ -12,12 +12,15 @@ class HomePage extends Component {
   }
 
   componentWillMount() {    
-    const {fileName} = props;
+    let {fileName, id} = this.props;
+    
+    fileName = 'some-blog-post.md';
     const location = `../../blog/${fileName}`;
 
-    fetch(location)
+    fetch(someBlogPost)
     .then(data => {
-      return data.text()
+      alert(JSON.stringify(data));
+      return data.text();
     })
     .then(text => {      
       this.setState({
@@ -37,4 +40,4 @@ class HomePage extends Component {
   }
 };
 
-export default {BlogItem};
+export default BlogItem;
