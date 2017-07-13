@@ -8,8 +8,8 @@ const BlogLink = props => {
     <div className="featured-item">    
       <div className="featured-item__info">
         <p><b>{item.title}</b></p>      
-        <p>{item.date}</p>      
-        <Link to={`/blog/${item.id}`}>Blog Item</Link>      
+        <p>{item.date}</p>              
+        <Link to={`/blog/${item.file}`}>Blog Item</Link>      
       </div>
     </div>
   );  

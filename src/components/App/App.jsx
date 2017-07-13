@@ -25,7 +25,7 @@ class App extends Component {
           <Header />
           <Route exact path="/" component={Main} />
           <Route path="/about" component={About} />
-          <Route path="/blog/:id" component={BlogItem} />
+          <Route path="/blog/:file" component={BlogItem} />
         </Container>
       </HashRouter>
     );

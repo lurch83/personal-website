@@ -5,11 +5,11 @@ import {Link} from 'react-router-dom';
 const Header = () => {
   return(
     <Box>
-      <h1>Andrew Doyle</h1>
-        <div>A somewhat tale blood, gears and software development.</div>
-        <div>
-          <Link to="/about">About</Link>
-        </div>
+      <Link to={'/'}><h1>Andrew Doyle</h1></Link>      
+      <div>A somewhat tale blood, gears and software development.</div>
+      <div>
+        <Link to="/about">About</Link>
+      </div>
     </Box> 
   );    
 }

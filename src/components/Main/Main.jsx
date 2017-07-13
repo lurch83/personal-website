@@ -11,10 +11,10 @@ class HomePage extends Component {
     return(
       <Box>
         <div className="featured-blog items">
-          {blogItems.map((item, i) => (            
+          {blogItems.map((item, id) => (            
             <BlogLink
               item={item}
-              key={i}
+              key={id}
             />
           ))}
         </div>
