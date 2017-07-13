@@ -12,14 +12,15 @@ class BlogItem extends Component {
   }
 
   componentWillMount() {    
-    let {fileName, id} = this.props;
+    let {fileName} = this.props;
+    
+    const {id} = this.props.match.params
     
     fileName = 'some-blog-post.md';
     const location = `../../blog/${fileName}`;
 
     fetch(someBlogPost)
-    .then(data => {
-      alert(JSON.stringify(data));
+    .then(data => {      
       return data.text();
     })
     .then(text => {      
