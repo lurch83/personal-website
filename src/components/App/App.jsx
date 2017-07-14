@@ -3,6 +3,7 @@ import {HashRouter, Route, Link, Match} from 'react-router-dom';
 import './App.css';
 import styled from 'styled-components';
 import Box from '../Box/Box';
+import Nav from '../Nav/Nav';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 import About from '../About/About';
@@ -21,12 +22,15 @@ class App extends Component {
   render() {
     return (         
       <HashRouter>
-        <Container>
-          <Header />
-          <Route exact path="/" component={Main} />
-          <Route path="/about" component={About} />
-          <Route path="/blog/:file" component={BlogItem} />
-        </Container>
+        <div>
+          <Nav></Nav>
+          <Container>
+            <Header />
+            <Route exact path="/" component={Main} />
+            <Route path="/about" component={About} />
+            <Route path="/blog/:file" component={BlogItem} />
+          </Container>        
+        </div>
       </HashRouter>
     );
   }
