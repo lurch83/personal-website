@@ -9,7 +9,7 @@ class HomePage extends Component {
   render() {  
 
     return(
-      <Box>
+      <Box style={{height: 1200 + 'px'}}>
         <div className="featured-blog items">
           {blogItems.map((item, id) => (            
             <BlogLink
