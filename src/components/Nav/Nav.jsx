@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 
@@ -15,15 +15,17 @@ const NavBox = styled.div`
   top:0px;  
 `;
 
-const Nav = () => {
-  return(
-    
-      <NavBox>
-        HOME | Blog | About Me
+class Nav extends Component {
+  
+  render() {  
+  
+    return(    
+      <NavBox className="nav-topnav">
+        <Link to="/">Home</Link>
+        <Link to="/about">About Me</Link>        
       </NavBox>
-    
-    
-  );    
+    );    
+  }
 }
 
 export default Nav;

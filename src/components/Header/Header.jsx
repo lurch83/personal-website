@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Box from '../Box/Box'
 import Nav from '../Nav/Nav';
 import {Link} from 'react-router-dom';
 
-const Header = () => {
+class Header extends Component {
+
+  render() {
+
   return(
     <div>    
       <Box>
@@ -15,7 +18,8 @@ const Header = () => {
       </Box>
     </div>
         
-  );    
+    ); 
+  }   
 }
 
 export default Header;

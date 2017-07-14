@@ -19,12 +19,16 @@ const Container = styled.div`
 `;
 
 class App extends Component {
+  constructor(props){
+    super(props);
+  }
   render() {
+    console.log(this.props);
     return (         
       <HashRouter>        
           <Container>
             <Nav></Nav>
-            <Header />
+            
             <Route exact path="/" component={Main} />
             <Route path="/about" component={About} />
             <Route path="/blog/:file" component={BlogItem} />
