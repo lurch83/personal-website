@@ -25,14 +25,15 @@ class App extends Component {
   render() {
     console.log(this.props);
     return (         
-      <HashRouter>        
+      <HashRouter>
+        <div>
+          <Route path="/" component={Nav} />
           <Container>
-            <Nav></Nav>
-            
             <Route exact path="/" component={Main} />
             <Route path="/about" component={About} />
             <Route path="/blog/:file" component={BlogItem} />
           </Container>        
+        </div>       
       </HashRouter>
     );
   }

@@ -1,0 +1,25 @@
+.nav-topnav a {
+    float:none;
+    
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav-topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.nav-navlink {
+  float: none;
+}
+.nav-navlink__selected {
+  border-bottom: red;
+  border-bottom-style: ridge;
+  border-bottom-width: 2px;
+  padding-bottom: 20px; 
+
+}
