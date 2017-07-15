@@ -1,39 +1,17 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
-import './Nav.css';
-
-
-const NavBox = styled.div`
-  background-color: #333;  
-  color: #fff;
-  padding: 20px;  
-  -moz-box-shadow: 0 0 3px #ccc;
-  -webkit-box-shadow: 0 0 3px #ccc;
-  box-shadow: 0 0 2px #ccc;
-  position: sticky;
-  top:0px;  
-`;
-
-const NavContainer = styled.div`
- width: 100%;
-  max-width: 75rem;
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-`;
+import {NavBox, NavContainer, Button} from './NavComponents';
 
 const NavLink = props => {
 
   const {pathname, to, title} = props;
-  const isSelected = pathname === to
-  ? '__selected'
-  : '';
+  const isSelected = (pathname === to);
   
   return(
-    <span className={`nav-navlink${isSelected}`}>
+    <Button selected={isSelected}>
       <Link to={to}>{title}</Link>
-    </span>
+    </Button>
     
   );
 };
