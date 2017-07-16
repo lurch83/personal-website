@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import {HashRouter, Route, Link, Match} from 'react-router-dom';
+import {Route, BrowserRouter} from 'react-router-dom';
 import './App.css';
 import styled from 'styled-components';
-import Box from '../Box/Box';
-import Header from '../Header/Header';
+import Nav from '../Nav/Nav';
 import Main from '../Main/Main';
 import About from '../About/About';
 import BlogItem from '../BlogItem/BlogItem';
@@ -18,16 +17,22 @@ const Container = styled.div`
 `;
 
 class App extends Component {
+  constructor(props){
+    super(props);
+  }
   render() {
+    console.log(this.props);
     return (         
-      <HashRouter>
-        <Container>
-          <Header />
-          <Route exact path="/" component={Main} />
-          <Route path="/about" component={About} />
-          <Route path="/blog/:file" component={BlogItem} />
-        </Container>
-      </HashRouter>
+      <BrowserRouter>
+        <div>
+            <Route path="/" component={Nav} />
+            <Container>
+              <Route exact path="/" component={Main} />
+              <Route path="/about" component={About} />
+              <Route path="/blog/:file" component={BlogItem} />              
+            </Container>        
+        </div>       
+      </BrowserRouter>
     );
   }
 }

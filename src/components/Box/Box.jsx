@@ -6,7 +6,11 @@ const Box = styled.div`
   padding: 20px;  
   -moz-box-shadow: 0 0 3px #ccc;
   -webkit-box-shadow: 0 0 3px #ccc;
-  box-shadow: 0 0 5px #f44336;
+  box-shadow: 0 0 2px #ccc;
+  
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  
 `;
 
 export default Box;

@@ -1,17 +1,26 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Box from '../Box/Box'
-import {Link} from 'react-router-dom';
+import styled from 'styled-components';
 
-const Header = () => {
+
+const Name = styled.div`
+
+`;
+
+class Header extends Component {
+
+  render() {
+
   return(
-    <Box>
-      <Link to={'/'}><h1>Andrew Doyle</h1></Link>      
-      <div>A somewhat tale blood, gears and software development.</div>
-      <div>
-        <Link to="/about">About</Link>
-      </div>
-    </Box> 
-  );    
+    <div>    
+      <Box>
+        <Name>Andrew Doyle</Name>
+        {/*<div>An tale of tears, gears and software development.</div>*/}
+      </Box>
+    </div>
+        
+    ); 
+  }   
 }
 
 export default Header;
