@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import {HashRouter, Route, Link, Match} from 'react-router-dom';
+import {Route, BrowserRouter} from 'react-router-dom';
 import './App.css';
 import styled from 'styled-components';
-import Box from '../Box/Box';
 import Nav from '../Nav/Nav';
-import Header from '../Header/Header';
 import Main from '../Main/Main';
 import About from '../About/About';
 import BlogItem from '../BlogItem/BlogItem';
@@ -25,16 +23,16 @@ class App extends Component {
   render() {
     console.log(this.props);
     return (         
-      <HashRouter>
+      <BrowserRouter>
         <div>
-          <Route path="/" component={Nav} />
-          <Container>
-            <Route exact path="/" component={Main} />
-            <Route path="/about" component={About} />
-            <Route path="/blog/:file" component={BlogItem} />
-          </Container>        
+            <Route path="/" component={Nav} />
+            <Container>
+              <Route exact path="/" component={Main} />
+              <Route path="/about" component={About} />
+              <Route path="/blog/:file" component={BlogItem} />              
+            </Container>        
         </div>       
-      </HashRouter>
+      </BrowserRouter>
     );
   }
 }
