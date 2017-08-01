@@ -25,6 +25,10 @@ const NavBox = styled.div`
     background-color: #00adff;
     color: #fff;
   }
+  display: block;
+  @media(max-width: 768px){
+    display: none;
+  }
 `;
 
 const NavContainer = styled.div`
@@ -33,6 +37,7 @@ const NavContainer = styled.div`
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
+
 `;
 
 const Button = styled.span`
