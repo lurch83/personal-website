@@ -13,6 +13,10 @@ const CenterTextContainer = styled.div`
   margin-right: auto;
 `;
 
+const PaddingTop20 = styled.div`
+  padding-top: 20px;
+`;
+
 const IconWrapper = styled.span`
   padding: 10px;
 `
@@ -40,19 +44,19 @@ const About = () => {
         </LeftAlign>
         <LeftAlign>
           When not writing code, I enjoy motorsports, sim racing (<a target="_blank" href="http://www.iracing.com">iRacing</a>) and spending time with my family.
-        </LeftAlign>
-        <LeftAlign>
           You can find me on iRacing under <a target="_blank" href="http://members.iracing.com/membersite/member/CareerStats.do?custid=169134">Andrew Doyle2</a>
-        </LeftAlign>      
-        <IconWrapper>
-          <a target="_blank" href="https://github.com/lurch83"><Icon icon={ICONS.GITHUB} size="25"/></a>                    
-        </IconWrapper>
-        <IconWrapper>
-          <a target="_blank" href="https://twitter.com/andrewdoyle19"><Icon icon={ICONS.TWITTER} size="25"/></a>
-        </IconWrapper>
-        <IconWrapper>
-          <a target="_blank" href="https://www.linkedin.com/in/andrew-doyle-7a241332/"><Icon icon={ICONS.LINKEDIN} size="25"/></a>
-        </IconWrapper>
+        </LeftAlign>        
+        <PaddingTop20>
+          <IconWrapper>
+            <a target="_blank" href="https://github.com/lurch83"><Icon icon={ICONS.GITHUB} size="25"/></a>                    
+          </IconWrapper>
+          <IconWrapper>
+            <a target="_blank" href="https://twitter.com/andrewdoyle19"><Icon icon={ICONS.TWITTER} size="25"/></a>
+          </IconWrapper>
+          <IconWrapper>
+            <a target="_blank" href="https://www.linkedin.com/in/andrew-doyle-7a241332/"><Icon icon={ICONS.LINKEDIN} size="25"/></a>
+          </IconWrapper>
+        </PaddingTop20>
       </CenterTextContainer>
     </Box> 
   );    

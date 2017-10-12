@@ -37,8 +37,8 @@ class Nav extends Component {
             />
           <NavLink 
             pathname={pathname}
-            to="/about" 
-            title="About Me" 
+            to="/blog" 
+            title="Blog" 
             />   
         </NavContainer>        
       </NavBox>

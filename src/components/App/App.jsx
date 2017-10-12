@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import {Route, BrowserRouter} from 'react-router-dom';
+import {Route, BrowserRouter, Switch} from 'react-router-dom';
 import './App.css';
 import styled from 'styled-components';
 import Nav from '../Nav/Nav';
 import Main from '../Main/Main';
 import About from '../About/About';
 import BlogItem from '../BlogItem/BlogItem';
+import NotFound from '../Main/NotFound';
 
 //TODO: Move this Container
 const Container = styled.div`
@@ -27,9 +28,12 @@ class App extends Component {
         <div>
             <Route path="/" component={Nav} />
             <Container>
-              <Route exact path="/" component={Main} />
-              <Route path="/about" component={About} />
-              <Route path="/blog/:file" component={BlogItem} />              
+              <Switch>
+                <Route exact path="/" component={About} />
+                <Route exact path="/blog" component={Main} />                                          
+                <Route exact path="/blog/:file" component={BlogItem} />     
+                <Route component={NotFound} />         
+              </Switch>
             </Container>        
         </div>       
       </BrowserRouter>
