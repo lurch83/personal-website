@@ -21,10 +21,14 @@ const NavBox = styled.div`
     font-size: 17px;
   }
  
-  a:hover {
-    background-color: #00adff;
-    color: #fff;
+  @media screen and (min-width:800px){
+    a:hover {
+      background-color: #00adff;
+      color: #fff;
+    }
   }
+
+  
 `;
 
 const NavContainer = styled.div`
