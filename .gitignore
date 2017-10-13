@@ -16,3 +16,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+#using sass now to generate css
+src/**/*.css

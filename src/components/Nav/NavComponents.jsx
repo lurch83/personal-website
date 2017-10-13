@@ -23,7 +23,7 @@ const NavBox = styled.div`
  
   @media screen and (min-width:800px){
     a:hover {
-      background-color: #00adff;
+      background-color: #2288bb;
       color: #fff;
     }
   }

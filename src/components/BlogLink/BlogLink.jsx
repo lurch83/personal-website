@@ -1,16 +1,36 @@
 import React, { PropTypes } from 'react';
 import {Link} from 'react-router-dom';
+import styled from 'styled-components';
+import moment from 'moment';
+
+const Title = styled.h2`
+  a {
+    text-decoration: none;
+    color: #2288bb;
+  }
+
+  a:hover{
+    text-decoration: underline;
+  }
+`;
+
+const Date = styled.div`
+
+`;
 
 const BlogLink = props => {  
   const {item} = props;
 
   return(
     <div className="featured-item">    
-      <div className="featured-item__info">
-        <p><b>{item.title}</b></p>      
-        <p>{item.date}</p>              
-        <Link to={`/blog/${item.file}`}>Blog Item</Link>      
-      </div>
+      
+        <Title>
+          <Link to={`/blog/${item.file}`}>{item.title}</Link>
+        </Title>
+        
+        <Date>{moment().format('Do MMMM YYYY')}</Date>              
+              
+      
     </div>
   );  
 }

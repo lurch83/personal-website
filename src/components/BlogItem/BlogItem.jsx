@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import ReactMarkdown from 'react-markdown';
 import Box from '../Box/Box'
-import someBlogPost from '../../blog-articles/some-blog-post.md'
 
 class BlogItem extends Component {
   constructor(props) {
@@ -29,7 +28,7 @@ class BlogItem extends Component {
   render() {  
     const {markdown} = this.state;        
     return(
-      <Box>        
+      <Box className="blog-item__article">        
         <ReactMarkdown source={markdown} />
       </Box>    
     );  
