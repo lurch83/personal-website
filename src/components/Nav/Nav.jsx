@@ -35,11 +35,11 @@ class Nav extends Component {
             to="/" 
             title="Home" 
             />
-          <NavLink 
+          {/* <NavLink 
             pathname={pathname}
             to="/blog" 
             title="Blog" 
-            />   
+            />    */}
         </NavContainer>        
       </NavBox>
     );    
