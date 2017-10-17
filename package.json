@@ -1,7 +1,7 @@
 {
   "name": "personal-website",
   "version": "0.1.0",
-  "homepage": "https://lurch83.github.io/personal-website",
+  "homepage": "http://www.andrewdoyle.me",
   "private": true,
   "dependencies": {
     "json-loader": "^0.5.4",
@@ -28,6 +28,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "aws-deploy": "npm run build && aws s3 sync build/ s3://www.andrewdoyle.me"
   }
 }
