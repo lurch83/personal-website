@@ -32,7 +32,7 @@ const About = () => {
         <img src={me} alt="me" />
         <h2>Andrew Doyle</h2>        
         <p>
-          Sofware Developer currently working at <a target="_blank" href="https://twitter.com/nibhealthfunds">@nibhealthfunds</a>
+          Sofware Developer currently working at <a target="_blank" href="https://twitter.com/LWBAustralia">@LWBAustralia</a>
         </p>
         <LeftAlign>
           Based in Newcastle, NSW, Australia, I have been a professional software developer since 2010 and I am passionate about building
