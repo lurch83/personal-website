@@ -37,7 +37,7 @@ const About = () => {
           The majority of my latest work has been using Typescript/NodeJS to build serverless applications deployed to Amazon Web Services using serverless technology.          
         </LeftAlign>
         <LeftAlign>
-          When not writing code, I enjoy motorsports, photography, sim racing (<a target="_blank" href="http://www.iracing.com">iRacing</a>) and spending time with my family.          
+          When not writing code, I enjoy motorsports, <a href="https://www.instagram.com/andrewdoyle19">astro and landscape photography</a>, sim racing (<a href="http://www.iracing.com">iRacing</a>) and spending time with my family.          
         </LeftAlign>
       </CenterTextContainer>
     </Box> 

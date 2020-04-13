@@ -50,11 +50,6 @@ class Nav extends Component {
             to="https://www.linkedin.com/in/andrew-doyle-7a241332/" 
             title="LinkedIn" 
           />
-          <NavLink 
-            pathname={pathname}
-            to="https://www.instagram.com/andrewdoyle19" 
-            title="Instagram" 
-          />
         </NavContainer>        
       </NavBox>
     );    
