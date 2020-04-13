@@ -18,11 +18,7 @@ const Container = styled.div`
 `;
 
 class App extends Component {
-  constructor(props){
-    super(props);
-  }
   render() {
-    console.log(this.props);
     return (         
       <BrowserRouter>
         <div>

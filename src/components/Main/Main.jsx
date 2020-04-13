@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 import Box from '../Box/Box'
 import BlogLink from '../BlogLink/BlogLink';
 import blogItems from '../../assets/blog.json';

@@ -1,18 +1,23 @@
 import React, {Component} from 'react';
-import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import {NavBox, NavContainer, Button} from './NavComponents';
+
+
+const isLocalUrl = (url) => /^\/(?!\/)/.test(url)
 
 const NavLink = props => {
 
   const {pathname, to, title} = props;
   const isSelected = (pathname === to);
   
+  const link = isLocalUrl(to) 
+  ? <Link to={to}>{title}</Link>
+  : <a href={to}>{title}</a>
+
   return(
     <Button selected={isSelected}>
-      <Link to={to}>{title}</Link>
-    </Button>
-    
+      {link}
+    </Button>    
   );
 };
 
@@ -35,11 +40,21 @@ class Nav extends Component {
             to="/" 
             title="Home" 
             />
-          {/* <NavLink 
+          <NavLink 
             pathname={pathname}
-            to="/blog" 
-            title="Blog" 
-            />    */}
+            to="https://github.com/lurch83" 
+            title="GitHub" 
+            />   
+          <NavLink 
+            pathname={pathname}
+            to="https://www.linkedin.com/in/andrew-doyle-7a241332/" 
+            title="LinkedIn" 
+          />
+          <NavLink 
+            pathname={pathname}
+            to="https://www.instagram.com/andrewdoyle19" 
+            title="Instagram" 
+          />
         </NavContainer>        
       </NavBox>
     );    

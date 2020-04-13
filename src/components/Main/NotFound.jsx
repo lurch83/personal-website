@@ -5,7 +5,7 @@ import sadParrot from '../../assets/images/sadparrot.gif';
 const NotFound = () => {
   return(
     <Box>      
-        <h3>Page Not Found <img src={sadParrot} /></h3>
+        <h3>Page Not Found <img src={sadParrot} alt="" /></h3>
     </Box> 
   );    
 }
